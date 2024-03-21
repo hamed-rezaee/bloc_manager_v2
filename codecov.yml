@@ -105,7 +105,3 @@ cli:
       # See Makefile:135
       collect_tests_options:
         - 'tests'
-        - '--ignore=tests/acceptance'
-        - '--ignore=tests/apidocs'
-        - '--ignore=tests/js'
-        - '--ignore=tests/tools'
