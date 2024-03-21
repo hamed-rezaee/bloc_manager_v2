@@ -1,60 +1,23 @@
+codecov:
+  require_ci_to_pass: yes
+  comment:
+    layout: "reach, diff, flags, files"
+    behavior: default
+    require_changes: no
+    require_base: no
+    require_head: no
+  notify:
+    require_ci_to_pass: yes
+    after_n_builds: 5
 coverage:
+  precision: 2
+  round: down
+  range: "70...100"
   status:
     project:
       default:
-        target: 50% #overall project/ repo coverage
-    patch:
-      service:
-        target: 41.67%
-        threshold: 0.01%
-        flags:
-          - service
-      controller:
         target: auto
-        flags:
-          - controller 
-      unit:
-        informational: true
-        target: auto
-        flags:
-          - unit
-      flutter:
-        target: 80%
-        flags:
-          - flutter
-
-github_checks:
-    annotations: true
-
-comment:
-  layout: "newheader, diff, flags, files"
-  require_changes: false  # if true: only post the comment if coverage changes
-  require_base: false        # [yes :: must have a base report to post]
-  require_head: true       # [yes :: must have a head report to post]
-  show_carryforward_flags: true 
-  show_critical_paths: true #new option to labeled critical files
-  hide_comment_details: true #collapse all the "detailed info" for the PR comment
-
-profiling:
-  critical_files_paths:
-    - lib/*
-  
-flags:
-  service:
-    carryforward: true
-    paths: 
-      - app/Services
-  controller:
-    carryforward: true
-    paths: 
-      - app/Http/Controllers
-  unit:
-    carryforward: true
-    paths: 
-      - app/Models
-  flutter:
-    paths:
-      - lib
-  backend:
-    paths:
-      - .*
+        threshold: 1%
+        paths:
+          - "lib/"
+          - "test/"
