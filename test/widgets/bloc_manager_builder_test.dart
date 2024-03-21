@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_deriv_bloc_manager/manager.dart';
 
 void main() {
-  const String blocKey = 'CUBIT_KEY';
+  const String blocKey = 'CUBIT_KEY_2';
 
   group('bloc manager builder test =>', () {
     setUp(() => BlocManager.instance.register(MockCube(), key: blocKey));
