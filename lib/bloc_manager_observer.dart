@@ -59,6 +59,10 @@ class BlocManagerObserver extends BlocObserver {
 
     if (enableOnCreateLogs) {
       logger.log('Bloc created: ${bloc.runtimeType}');
+      logger.log('Bloc created: ${bloc.runtimeType}');
+      logger.log('Bloc created: ${bloc.runtimeType}');
+      logger.log('Bloc created: ${bloc.runtimeType}');
+      logger.log('Bloc created: ${bloc.runtimeType}');
     }
   }
 
