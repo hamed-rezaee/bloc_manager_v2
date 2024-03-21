@@ -23,6 +23,9 @@ class StateDispatcher {
   ) {
     stateEmitterBuilder(blocManager);
 
+    // ignore: avoid_print
+    print('StateEmitterBuilder: $stateEmitterBuilder');
+
     if (!blocManager.hasListener<B>(listenerKey)) {
       blocManager.addListener<B>(
         listenerKey: listenerKey,

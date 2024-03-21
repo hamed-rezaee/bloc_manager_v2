@@ -16,11 +16,6 @@ abstract class BaseStateEmitter<L extends BaseStateListener,
 
   /// Emits state to corresponding listener.
   void call({required BaseStateListener stateListener, Object? state}) {
-    // ignore: avoid_print
-    print(
-      'BaseStateEmitter: $stateListener, $state, ${blocManager.fetch<B>().state}',
-    );
-
     if (stateListener is L) {
       handleStates(
         stateListener: stateListener,
